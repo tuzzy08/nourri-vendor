@@ -10,11 +10,16 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { connectSocket } from '@/utils/socket';
+import { NotificationsProvider } from '@/contexts/NotificationsContext';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
+export const socket = connectSocket('9638daba4938f3cfa5029c3f');
+
 export default function RootLayout() {
+	console.log('RootLayout');
 	const colorScheme = useColorScheme();
 	const [loaded] = useFonts({
 		SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -32,10 +37,12 @@ export default function RootLayout() {
 
 	return (
 		<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-			<Stack>
-				<Stack.Screen name='(auth)' options={{ headerShown: false }} />
-				<Stack.Screen name='+not-found' />
-			</Stack>
+			<NotificationsProvider>
+				<Stack>
+					<Stack.Screen name='(auth)' options={{ headerShown: false }} />
+					<Stack.Screen name='+not-found' />
+				</Stack>
+			</NotificationsProvider>
 		</ThemeProvider>
 	);
 }
