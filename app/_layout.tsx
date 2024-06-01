@@ -19,7 +19,6 @@ SplashScreen.preventAutoHideAsync();
 export const socket = connectSocket('9638daba4938f3cfa5029c3f');
 
 export default function RootLayout() {
-	console.log('RootLayout');
 	const colorScheme = useColorScheme();
 	const [loaded] = useFonts({
 		SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),

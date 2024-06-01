@@ -1,0 +1,152 @@
+[
+	{
+		"order_no": "SK237564",
+		"item_title": "Burger Meal",
+		"item_description": "2 cheeseburgers, 1 large fries, 1 Pepsi",
+		"items": [
+			{ "item_title": "Cheeseburger", "item_qty": 2, "item_price": 3500 },
+			{ "item_title": "Large Fries", "item_qty": 1, "item_price": 1500 },
+			{ "item_title": "Pepsi", "item_qty": 1, "item_price": 500 }
+		],
+		"extras": [
+			{ "item_title": "Extra Cheese", "item_qty": 2, "item_price": 300 },
+			{ "item_title": "Extra Sauce", "item_qty": 1, "item_price": 150 }
+		],
+		"order_total_price": 9200
+	},
+	{
+		"order_no": "SK873452",
+		"item_title": "Sushi Combo",
+		"item_description": "8 pieces sushi, 1 miso soup, 1 green tea",
+		"items": [
+			{ "item_title": "Sushi", "item_qty": 8, "item_price": 8000 },
+			{ "item_title": "Miso Soup", "item_qty": 1, "item_price": 600 },
+			{ "item_title": "Green Tea", "item_qty": 1, "item_price": 400 }
+		],
+		"extras": [
+			{ "item_title": "Wasabi", "item_qty": 1, "item_price": 200 },
+			{ "item_title": "Extra Soy Sauce", "item_qty": 1, "item_price": 100 }
+		],
+		"order_total_price": 9300
+	},
+	{
+		"order_no": "SK564738",
+		"item_title": "Taco Fiesta",
+		"item_description": "3 beef tacos, 1 nachos, 1 lemonade",
+		"items": [
+			{ "item_title": "Beef Taco", "item_qty": 3, "item_price": 4500 },
+			{ "item_title": "Nachos", "item_qty": 1, "item_price": 2000 },
+			{ "item_title": "Lemonade", "item_qty": 1, "item_price": 500 }
+		],
+		"extras": [
+			{ "item_title": "Guacamole", "item_qty": 1, "item_price": 300 },
+			{ "item_title": "Extra Cheese", "item_qty": 1, "item_price": 200 }
+		],
+		"order_total_price": 7500
+	},
+	{
+		"order_no": "SK983245",
+		"item_title": "Pasta Delight",
+		"item_description": "1 Alfredo pasta, 1 garlic bread, 1 iced tea",
+		"items": [
+			{ "item_title": "Alfredo Pasta", "item_qty": 1, "item_price": 7000 },
+			{ "item_title": "Garlic Bread", "item_qty": 1, "item_price": 1500 },
+			{ "item_title": "Iced Tea", "item_qty": 1, "item_price": 400 }
+		],
+		"extras": [
+			{ "item_title": "Parmesan Cheese", "item_qty": 1, "item_price": 200 },
+			{ "item_title": "Extra Sauce", "item_qty": 1, "item_price": 250 }
+		],
+		"order_total_price": 9350
+	},
+	{
+		"order_no": "SK847352",
+		"item_title": "Salad Special",
+		"item_description": "1 Caesar salad, 1 breadstick, 1 water",
+		"items": [
+			{ "item_title": "Caesar Salad", "item_qty": 1, "item_price": 5000 },
+			{ "item_title": "Breadstick", "item_qty": 1, "item_price": 1000 },
+			{ "item_title": "Water", "item_qty": 1, "item_price": 200 }
+		],
+		"extras": [
+			{ "item_title": "Extra Croutons", "item_qty": 1, "item_price": 150 },
+			{ "item_title": "Extra Dressing", "item_qty": 1, "item_price": 100 }
+		],
+		"order_total_price": 6450
+	},
+	{
+		"order_no": "SK562374",
+		"item_title": "Steak Dinner",
+		"item_description": "1 steak, 1 mashed potatoes, 1 red wine",
+		"items": [
+			{ "item_title": "Steak", "item_qty": 1, "item_price": 12000 },
+			{ "item_title": "Mashed Potatoes", "item_qty": 1, "item_price": 3000 },
+			{ "item_title": "Red Wine", "item_qty": 1, "item_price": 1500 }
+		],
+		"extras": [
+			{ "item_title": "Gravy", "item_qty": 1, "item_price": 200 },
+			{ "item_title": "Extra Butter", "item_qty": 1, "item_price": 100 }
+		],
+		"order_total_price": 16900
+	},
+	{
+		"order_no": "SK938476",
+		"item_title": "Breakfast Combo",
+		"item_description": "1 pancake stack, 1 bacon, 1 coffee",
+		"items": [
+			{ "item_title": "Pancake Stack", "item_qty": 1, "item_price": 4000 },
+			{ "item_title": "Bacon", "item_qty": 1, "item_price": 2000 },
+			{ "item_title": "Coffee", "item_qty": 1, "item_price": 500 }
+		],
+		"extras": [
+			{ "item_title": "Maple Syrup", "item_qty": 1, "item_price": 150 },
+			{ "item_title": "Extra Butter", "item_qty": 1, "item_price": 100 }
+		],
+		"order_total_price": 6750
+	},
+	{
+		"order_no": "SK645283",
+		"item_title": "Seafood Platter",
+		"item_description": "1 grilled salmon, 1 shrimp cocktail, 1 white wine",
+		"items": [
+			{ "item_title": "Grilled Salmon", "item_qty": 1, "item_price": 10000 },
+			{ "item_title": "Shrimp Cocktail", "item_qty": 1, "item_price": 4000 },
+			{ "item_title": "White Wine", "item_qty": 1, "item_price": 2000 }
+		],
+		"extras": [
+			{ "item_title": "Lemon Wedges", "item_qty": 1, "item_price": 100 },
+			{ "item_title": "Tartar Sauce", "item_qty": 1, "item_price": 150 }
+		],
+		"order_total_price": 16450
+	},
+	{
+		"order_no": "SK762534",
+		"item_title": "Vegetarian Feast",
+		"item_description": "1 veggie burger, 1 sweet potato fries, 1 iced tea",
+		"items": [
+			{ "item_title": "Veggie Burger", "item_qty": 1, "item_price": 5000 },
+			{ "item_title": "Sweet Potato Fries", "item_qty": 1, "item_price": 2000 },
+			{ "item_title": "Iced Tea", "item_qty": 1, "item_price": 500 }
+		],
+		"extras": [
+			{ "item_title": "Extra Avocado", "item_qty": 1, "item_price": 300 },
+			{ "item_title": "Extra Sauce", "item_qty": 1, "item_price": 150 }
+		],
+		"order_total_price": 7950
+	},
+	{
+		"order_no": "SK481927",
+		"item_title": "BBQ Feast",
+		"item_description": "1 BBQ ribs, 1 coleslaw, 1 root beer",
+		"items": [
+			{ "item_title": "BBQ Ribs", "item_qty": 1, "item_price": 9000 },
+			{ "item_title": "Coleslaw", "item_qty": 1, "item_price": 1500 },
+			{ "item_title": "Root Beer", "item_qty": 1, "item_price": 500 }
+		],
+		"extras": [
+			{ "item_title": "Extra BBQ Sauce", "item_qty": 1, "item_price": 200 },
+			{ "item_title": "Cornbread", "item_qty": 1, "item_price": 250 }
+		],
+		"order_total_price": 11450
+	}
+]

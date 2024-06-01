@@ -42,6 +42,9 @@ export default {
 		tint: tintColorDark,
 		tabIconDefault: '#ccc',
 		tabIconSelected: tintColorDark,
+		card: {
+			background: '#202129',
+		},
 	},
 	primary: '#ff0000',
 	secondary: '#FFA500',
