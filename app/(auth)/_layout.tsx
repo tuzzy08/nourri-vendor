@@ -18,14 +18,25 @@ SplashScreen.preventAutoHideAsync();
 
 export default function AuthLayout() {
 	const colorScheme = useColorScheme();
-	const { schedulePushNotification } = useNotifications();
+	const { scheduleNewOrderNotification } = useNotifications();
 
 	useEffect(() => {
 		// Show push events from socket messages
 		socket.on('orderPlaced', (order) => {
+			const notification_category = 'NEW_ORDER';
+			const orderNotification = {
+				title: 'New order',
+				vibrate: [1, 1, 1],
+				subtitle: 'You have a new order!',
+				body: order.description,
+				categoryIdentifier: notification_category,
+				data: {
+					orderId: order.order_id,
+				},
+			};
 			console.log('New order received:', order);
 			// Show notification or process the order in the UI
-			schedulePushNotification(order);
+			scheduleNewOrderNotification(orderNotification);
 		});
 		return () => {
 			socket.off('orderPlaced');

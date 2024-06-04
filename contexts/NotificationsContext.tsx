@@ -6,23 +6,45 @@ import Constants from 'expo-constants';
 
 type NotificationContext = {
 	notification: Notifications.Notification | undefined;
-	schedulePushNotification: (
+	scheduleNewOrderNotification: (
 		notification: Notifications.NotificationContentInput
 	) => void;
 };
 
 export const NotificationsContext = createContext<NotificationContext>({
 	notification: undefined,
-	schedulePushNotification: (notification: {}) => {},
+	scheduleNewOrderNotification: (notification: {}) => {},
 });
 // Notification Handler
 Notifications.setNotificationHandler({
 	handleNotification: async () => ({
 		shouldShowAlert: true,
 		shouldPlaySound: true,
-		shouldSetBadge: false,
+		shouldSetBadge: true,
 	}),
 });
+
+const notification_category = 'NEW_ORDER';
+const notification_action_identifier_view = 'VIEW';
+const notification_action_identifier_accept = 'ACCEPT';
+const notification_options = {
+	isAuthenticationRequired: true,
+	opensAppToForeground: true,
+};
+
+// Set Notification category
+Notifications.setNotificationCategoryAsync(notification_category, [
+	{
+		buttonTitle: 'View',
+		identifier: notification_action_identifier_view,
+		options: notification_options,
+	},
+	{
+		buttonTitle: 'Accept',
+		identifier: notification_action_identifier_accept,
+		options: notification_options,
+	},
+]);
 
 export function NotificationsProvider({
 	children,
@@ -56,7 +78,18 @@ export function NotificationsProvider({
 
 		responseListener.current =
 			Notifications.addNotificationResponseReceivedListener((response) => {
-				console.log(response);
+				Notifications.getNotificationCategoriesAsync().then((categories) => {
+					// console.log(categories);
+					if (
+						response.actionIdentifier === notification_action_identifier_view
+					) {
+						console.log('View notification');
+					} else if (
+						response.actionIdentifier === notification_action_identifier_accept
+					) {
+						console.log('Accept notification');
+					}
+				});
 			});
 
 		return () => {
@@ -69,12 +102,12 @@ export function NotificationsProvider({
 		};
 	}, []);
 
-	async function schedulePushNotification(
+	async function scheduleNewOrderNotification(
 		notification: Notifications.NotificationContentInput
 	) {
 		await Notifications.scheduleNotificationAsync({
 			content: notification,
-			trigger: { seconds: 2 },
+			trigger: null,
 		});
 	}
 
@@ -82,7 +115,7 @@ export function NotificationsProvider({
 		<NotificationsContext.Provider
 			value={{
 				notification,
-				schedulePushNotification,
+				scheduleNewOrderNotification,
 			}}
 		>
 			{children}
